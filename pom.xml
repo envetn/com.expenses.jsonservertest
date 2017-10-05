@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.expenses.bundle</groupId>
+        <artifactId>superbundle</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <!--<relativePath>../com.expenses.bundle/superbundle/pom.xml</relativePath>-->
+    </parent>
+
+
+    <groupId>com.example.servertest</groupId>
+    <artifactId>BlackBoxTest</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <!--<Certificat.version>1.0-SNAPSHOT</Certificat.version>-->
+        <com.expenses.JsonServer.version>1.0-SNAPSHOT</com.expenses.JsonServer.version>
+        <SparkServer.version>1.0-SNAPSHOT</SparkServer.version>
+    </properties>
+
+    <dependencies>
+        <!---->
+        <!--<dependency>-->
+        <!--<groupId>CertificateHandler</groupId>-->
+        <!--<artifactId>com.example.certificat</artifactId>-->
+        <!--<version>${Certificat.version}</version>-->
+        <!--<scope>system</scope>-->
+        <!--<systemPath>${workspace.path}certificat/target/certificate.jar</systemPath>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>JsonServer</groupId>-->
+            <!--<artifactId>com.example.JsonServer</artifactId>-->
+            <!--<version>${JsonServer.version}</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>com.expenses.JsonServer</groupId>
+            <artifactId>handler</artifactId>
+            <version>${com.expenses.JsonServer.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.example.spark</groupId>
+            <artifactId>API</artifactId>
+            <version>${SparkServer.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+        <!--<dependency>-->
+        <!--<groupId>org.testng</groupId>-->
+        <!--<artifactId>testng</artifactId>-->
+        <!--<version>6.8</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>1.7.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertJ.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!-- Java version -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
